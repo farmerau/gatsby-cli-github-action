@@ -1,17 +1,15 @@
 FROM node:14-slim
 
 LABEL version="1.0.0"
-LABEL "repository"="http://github.com/jzweifel/gatsby-cli-github-action"
-LABEL "homepage"="http://github.com/jzweifel"
-LABEL "maintainer"="Jacob Zweifel <jacob@jacobzweifel.com>"
+LABEL "repository"="http://github.com/farmerau/gatsby-cli-github-action"
+LABEL "homepage"="http://github.com/farmerau"
+LABEL "maintainer"="Austin Farmer"
 
 LABEL "com.github.actions.name"="Github Action for Gatsby CLI"
-LABEL "com.github.actions.description"="Wraps the Gatsby CLI to enable common Gatsby commands."
-LABEL "com.github.actions.icon"="package"
-LABEL "com.github.actions.color"="purple"
+LABEL "com.github.actions.description"="Wraps the Gatsby CLI to enable common Gatsby commands. Forked from http://github.com/jzweifel/gatsby-cli-github-action."
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
 
-RUN yarn global add gatsby-cli
+RUN npm install -g gatsby-cli
 
 COPY entrypoint.sh /entrypoint.sh
 
