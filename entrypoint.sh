@@ -6,8 +6,6 @@ if [ -n "$GATSBY_PROJECT_PATH" ]; then
   cd "$GATSBY_PROJECT_PATH" || exit
 fi
 
-sh -c "yarn"
-
 sh -c "gatsby $*"
 ACTUAL_EXIT="$?"
 
